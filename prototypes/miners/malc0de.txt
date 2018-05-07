@@ -1,0 +1,23 @@
+    malc0de-miner:
+        class: minemeld.ft.json.SimpleJSON
+        config:
+            age_out:
+				default: null
+				interval: 600
+				sudden_death: true
+			attributes:
+				confidence: 80
+				direction: inbound
+				share_level: green
+			type: IPv4
+			ignore_regex: ^#.*
+			indicator:
+				regex: ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$
+			source_name: malc0de
+			url: http://malc0de.com/bl/IP_Blacklist.txt
+        description: malc0de
+        development_status: STABLE
+        indicator_types:
+        - IPv4
+        node_type: miner
+        tags: []
