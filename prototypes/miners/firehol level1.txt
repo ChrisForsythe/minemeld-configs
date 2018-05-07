@@ -1,0 +1,26 @@
+    firehol level1:
+        class: minemeld.ft.http.HttpFT
+        config:
+            age_out:
+                default: null
+                interval: 600
+                sudden_death: true
+            attributes:
+                confidence: 80
+                direction: inbound
+                share_level: green
+                type: IPv4
+            ignore_regex: ^#.*
+            source_name: firehol
+            url: https://iplists.firehol.org/files/firehol_level1.netset
+        description: 'Firehol Level 1  IP blacklist http://iplists.firehol.org/
+
+
+            This site analyses all available security IP Feeds, mainly related to
+            on-line attacks, on-line service abuse, malwares, botnets, command and
+            control servers and other cybercrime activities.'
+        development_status: STABLE
+        indicator_types:
+        - IPv4
+        node_type: miner
+        tags: []

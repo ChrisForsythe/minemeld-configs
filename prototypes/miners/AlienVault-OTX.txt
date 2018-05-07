@@ -1,0 +1,20 @@
+    AlienVault-OTX:
+        class: minemeld.ft.taxii.TaxiiClient
+        config:
+            age_out:
+                default: 30d
+                sudden_death: false
+            attributes:
+                confidence: 30
+                share_level: green
+            client_credentials_required: true
+            collection: user_AlienVault
+            discovery_service: https://otx.alienvault.com/taxii/discovery
+            initial_interval: 7d
+            source_name: alienvault.otx
+        description: AlienVault OTX taxii miner
+        development_status: EXPERIMENTAL
+        indicator_types:
+        - any
+        node_type: miner
+        tags: []

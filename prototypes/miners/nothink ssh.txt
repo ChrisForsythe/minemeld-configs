@@ -1,0 +1,22 @@
+    NoThink-SSH-IPBlacklist:
+        class: minemeld.ft.http.HttpFT
+        config:
+            age_out:
+                default: null
+                interval: 600
+                sudden_death: true
+            attributes:
+                confidence: 80
+                direction: inbound
+                share_level: green
+                type: IPv4
+            ignore_regex: ^#.*
+            indicator:
+                regex: ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$
+            url: http://www.nothink.org/blacklist/blacklist_ssh_day.txt
+        description: Nothink SSH Blocklist IPV4 from http://www.nothink.org/honeypots.php
+        development_status: STABLE
+        indicator_types:
+        - IPv4
+        node_type: miner
+        tags: []

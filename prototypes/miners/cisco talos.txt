@@ -1,0 +1,18 @@
+    minemeldlocal__Cisco Talos:
+        class: minemeld.ft.http.HttpFT
+        config:
+            age_out:
+                default: null
+                interval: 67
+                sudden_death: true
+            attributes:
+                confidence: 100
+                share_level: red
+            interval: 3600
+            url: https://www.talosintelligence.com/documents/ip-blacklist/
+        description: minemeldlocal__Cisco Talos
+        development_status: STABLE
+        indicator_types:
+        - IPv4
+        node_type: miner
+        tags: []

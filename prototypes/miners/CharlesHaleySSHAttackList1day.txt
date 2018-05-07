@@ -1,0 +1,23 @@
+    CharlesHaleySSHAttackList1day:
+        class: minemeld.ft.http.HttpFT
+        config:
+            age_out:
+                default: null
+                interval: 1200
+                sudden_death: true
+            attributes:
+                confidence: 80
+                direction: inbound
+                share_level: green
+                type: IPv4
+            ignore_regex: ^#.*
+            indicator:
+                regex: ^.*[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}
+            source_name: charleshaley
+            url: http://charles.the-haleys.org/ssh_dico_attack_with_timestamps.php?days=1
+        description: From http://charles.the-haleys.org/
+        development_status: STABLE
+        indicator_types:
+        - IPv4
+        node_type: miner
+        tags: []
